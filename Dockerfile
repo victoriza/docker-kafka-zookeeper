@@ -33,6 +33,4 @@ ADD assets/supervisor/kafka.conf assets/supervisor/zookeeper.conf /etc/superviso
 # 2181 is zookeeper, 9092 is kafka
 EXPOSE 2181 9092
 
-WORKDIR 
-
 CMD ["supervisord", "-n"]

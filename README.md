@@ -1,6 +1,15 @@
 Docker Kafka Zookeeper
 ======================
-Docker image for Kafka message broker including Zookeeper
+This repository provides everything you need to run Kafka in Docker.
+
+Why?
+---
+The main hurdle of running Kafka in Docker is that it depends on Zookeeper.
+Compared to other Kafka docker images, this one runs both Zookeeper and Kafka
+in the same container. This means:
+
+* No dependency on an external Zookeeper host, or linking to another container
+* Zookeeper and Kafka are configured to work together out of the box
 
 Build
 -------------
@@ -19,22 +28,18 @@ Test
 ----
 Run Kafka console consumer (ssh)
 ```
-bin/kafka-console-consumer.sh --bootstrap-server <YOUR_HOST>:9092 --topic test
+bin/kafka-console-consumer --bootstrap-server <YOUR_HOST>:9092 --topic test
 ```
 
 Run Kafka console producer (ssh)
 ```
 bin/kafka-console-producer --broker-list <YOUR_HOST>:9092 --topic test
-test1
-test2
-test3
+banana!
 ```
 
 Verify messages been received in console consumer
 ```
-test1
-test2
-test3
+banana!
 ```
 
 Credits

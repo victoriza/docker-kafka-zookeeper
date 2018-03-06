@@ -26,6 +26,11 @@ docker run -p 2181:2181 -p 9092:9092 -e ADVERTISED_HOST=<YOUR_HOST> kafka-zookee
 
 Test
 ----
+Create topic
+```
+kafka-topics --create --zookeeper <YOUR_HOST>:2181 --replication-factor 1 --partitions 1 --topic test
+```
+
 Run Kafka console consumer (ssh)
 ```
 bin/kafka-console-consumer --bootstrap-server <YOUR_HOST>:9092 --topic test

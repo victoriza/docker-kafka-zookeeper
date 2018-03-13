@@ -8,10 +8,13 @@ apt-get update && \
 #install java
 apt-get update
 apt-get install openjdk-8-jre
+
+#update-alternatives --config java
+
+#check java version
 echo java -version
 
 #note that default broker.id = 0
-
 export ZOOKEEPER_VERSION=3.4.11
 export SCALA_VERSION=2.12
 export KAFKA_VERSION=1.0.0

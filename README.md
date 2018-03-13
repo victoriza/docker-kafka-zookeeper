@@ -39,13 +39,29 @@ bin/kafka-console-consumer --bootstrap-server <YOUR_HOST>:9092 --topic test
 Run Kafka console producer (ssh)
 ```
 bin/kafka-console-producer --broker-list <YOUR_HOST>:9092 --topic test
-banana!
+banana0!
 ```
 
 Verify messages been received in console consumer
 ```
-banana!
+banana0!
 ```
+
+Clusterize it
+=============
+If you want to clusterize it (for testing purposes) use the standalone scripts and modify server.properties for each additional broker.
+See examples below:
+config/server-1.properties:
+    broker.id=1
+    listeners=PLAINTEXT://:9093
+    log.dir=/tmp/kafka-logs-1
+ 
+config/server-2.properties:
+    broker.id=2
+    listeners=PLAINTEXT://:9094
+    log.dir=/tmp/kafka-logs-2
+
+NOTE: If they are not running on the same machine, mind the public / private IP
 
 Credits
 -------

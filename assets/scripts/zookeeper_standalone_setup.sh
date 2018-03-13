@@ -6,4 +6,5 @@ wget -q http://ftp.cixug.es/apache/zookeeper/zookeeper-"$ZOOKEEPER_VERSION"/zook
 ls -l /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
 tar xfz /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz -C /opt && rm /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
 
+#remember to copy the zoo.conf
 $ZOOKEEPER_HOME/bin/zkServer.sh start-foreground

@@ -48,14 +48,16 @@ banana0!
 ```
 
 Clusterize it
-=============
+-------------
 If you want to clusterize it (for testing purposes) use the standalone scripts and modify server.properties for each additional broker.
 See examples below:
+
 config/server-1.properties:
     broker.id=1
     listeners=PLAINTEXT://:9093
     log.dir=/tmp/kafka-logs-1
  
+
 config/server-2.properties:
     broker.id=2
     listeners=PLAINTEXT://:9094

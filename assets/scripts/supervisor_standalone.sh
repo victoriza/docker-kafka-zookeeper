@@ -2,9 +2,10 @@ apt-get update && \
     apt-get install -y wget supervisor && \
     apt-get install wget -y && \
     rm -rf /var/lib/apt/lists/* && \
-    apt-get clean && \
     apt-get install vim -y && \
-    apt-get install git -y 
+    apt-get install git -y && \
+    apt-get install openjdk-8-jre -y && \
+    apt-get clean && \
 
 #get the repo
 cd /home

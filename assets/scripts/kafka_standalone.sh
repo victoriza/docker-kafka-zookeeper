@@ -1,4 +1,5 @@
 #install java
+apt-get update
 apt-get install openjdk-8-jre -y
 
 #update-alternatives --config java

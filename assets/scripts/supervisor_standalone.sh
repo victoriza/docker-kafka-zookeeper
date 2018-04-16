@@ -5,7 +5,7 @@ apt-get update && \
     apt-get install vim -y && \
     apt-get install git -y && \
     apt-get install openjdk-8-jre -y && \
-    apt-get clean && \
+    apt-get clean
 
 #get the repo
 cd /home

@@ -1,5 +1,5 @@
 #!/bin/sh
-export ZOOKEEPER_VERSION=3.4.11
+export ZOOKEEPER_VERSION=3.4.12
 export ZOOKEEPER_HOME=/opt/zookeeper-"$ZOOKEEPER_VERSION"
 
 wget -q http://ftp.cixug.es/apache/zookeeper/zookeeper-"$ZOOKEEPER_VERSION"/zookeeper-"$ZOOKEEPER_VERSION".tar.gz -O /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
